@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 7</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+
+
+
+</head>
+
+<body>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="3" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+        <div class="offcanvas-header">
+            <p id="offcanvasRightLabel">THEME CUSTOMIZER</p>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="theme-body">
+                <p class="theme-heading"><em> Try a pre-build Swatch! </em></p>
+
+                <div class="theme-color default-theme" id="delt_theme">
+                    <p>Default</p>
+                </div>
+                <div class="theme-color flat-theme" id="flat_theme">
+                    <p>Flat</p>
+                </div>
+                <div class="theme-color sunset-theme" id="sunset_theme">
+                    <p>Sunset</p>
+                </div>
+                <div class="theme-color subtle-theme" id="subtle_theme">
+                    <p>Subtle</p>
+                </div>
+                <div class="theme-color seafoam-theme" id="seafoam_theme">
+                    <p>Seafoam</p>
+                </div>
+
+
+
+
+                <p class="theme-heading"><em>or choose your own colours...</em></p>
+                <form action="">
+                    <div class="clr_changer" id="clr_changerp">
+                        <input type="color" value="#0061f2" id="primary" onchange="fetch()">
+                        <p>Primary</p>
+                        <p id="hex">#0061f2</p>
+                    </div>
+                    <div class="clr_changer" id="clr_changers">
+                        <input type="color" value="#6900c7" id="secondary" onchange="fetch2()">
+                        <p>Secondary</p>
+                        <p id="hex2">#6900c7</p>
+                    </div>
+
+                </form>
+                <p class="theme-heading"><em>Need ideas? Randomize!</em></p>
+                <hr>
+                <p class="theme-heading"><em>Finished? Export your color palette file with install instructions!</em></p>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <button class="btn btn-light gif-div" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="assets/cog.gif" alt=""></button>
+
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h3 class="pt-1 px-2">SB-UI KIT PRO</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="#about">Home</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown  mx-2">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Landings
+                        </a>
+                        <div class="dropdown-menu py-4 px-2" aria-labelledby="navbarDropdown">
+                            <div class="row px-3">
+                                <div class="col-lg-6">
+                                    <h6 class="text-heading">Applicatons</h6>
+                                    <a href=""> Mobile App</a>
+
+                                    <a href=""> Desktop App </a>
+                                    <h6 class="text-heading"> Business</h6>
+                                    <a href=" ">  Multipurpose</a>
+                                    <a href=" ">  Agency</a>
+                                    <a href=" ">  Press</a>
+                                    <a href=" ">  Directory</a>
+                                    <a href=" ">  Rental</a>
+                                    <a href="">Real Estate</a>
+                                    <a href="">Classifieds</a>
+                                    <h6 class="text-heading"> Lead Generation</h6>
+                                    <a href=""> Lead Capture</a>
+                                </div>
+                                <div class="col-lg-6">
+
+                                    <h6 class="text-heading"> Personal</h6>
+                                    <a href=""> Resume</a>
+                                    <a href=""> Portfolio </a>
+                                    <h6 class="text-heading "> Header Styles</h6>
+                                    <a href=" ">  Basic</a>
+                                    <a href=" "> Basic (Signup)</a>
+                                    <a href=" ">  Graphic</a>
+                                    <a href=" ">  Graphic (Signup)</a>
+                                    <a href=" ">  Inner Page</a>
+                                    <a href="">Nav Only</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--dropdown 2-->
+                    <li class="nav-item dropdown  mx-2">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
+                    </a>
+                        <div class="dropdown-menu py-3 px-2" aria-labelledby="navbarDropdown">
+                            <div class="row px-3">
+                                <div class="col-lg-6">
+                                    <h6 class="text-heading">Applicatons</h6>
+                                    <a href=""> Mobile App</a>
+
+                                    <a href=""> Desktop App </a>
+                                    <h6 class="text-heading"> Business</h6>
+                                    <a href=" ">  Multipurpose</a>
+                                    <a href=" ">  Agency</a>
+                                    <a href=" ">  Press</a>
+                                    <a href=" ">  Directory</a>
+                                    <a href=" ">  Rental</a>
+                                    <a href="">Real Estate</a>
+                                    <a href="">Classifieds</a>
+                                    <h6 class="text-heading"> Lead Generation</h6>
+                                    <a href=""> Lead Capture</a>
+                                </div>
+                                <div class="col-lg-6">
+
+                                    <h6 class="text-heading"> Personal</h6>
+                                    <a href=""> Resume</a>
+                                    <a href=""> Portfolio </a>
+                                    <h6 class="text-heading"> Header Styles</h6>
+                                    <a href=" ">  Basic</a>
+                                    <a href=" "> Basic (Signup)</a>
+                                    <a href=" ">  Graphic</a>
+                                    <a href=" ">  Graphic (Signup)</a>
+                                    <a href=" ">  Inner Page</a>
+                                    <a href="">Nav Only</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--end-->
+                    <li class="nav-item dropdown  mx-2">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Documentation
+                        </a>
+                        <div class="dropdown-menu py-4 px-3" aria-labelledby="navbarDropdown">
+                            <div class="document-div">
+                                <div class="doc-icon-div"><i class="fas fa-book-open"></i></div>
+
+                                <div class="doc-content-div">
+                                    <h6 class="doc-head mb-0">Documentation</h6>
+                                    <p class="m-0">Usage instructions and reference.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="document-div">
+                                <div class="doc-icon-div"><i class="fas fa-code"></i></div>
+
+                                <div class="doc-content-div">
+                                    <h6 class="doc-head mb-0">Documentation</h6>
+                                    <p class="m-0">Usage instructions and reference.</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="document-div">
+                                <div class="doc-icon-div"><i class="far fa-file"></i></div>
+
+                                <div class="doc-content-div">
+                                    <h6 class="doc-head mb-0">Documentation</h6>
+                                    <p class="m-0">Usage instructions and reference.</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </li>
+
+
+
+                </ul>
+                <form class="d-flex pe-5 ">
+                    <button class="btn btn-primary px-3 " type="submit" id="buy-btn">Buy Now <i class="fas fa-long-arrow-alt-right px-1 "></i></button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-----===============================================================================----->
+    <!-- header -->
+
+    <header>
+        <div class="container header-container">
+            <div class="row">
+
+
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="header-content-div px-2">
+                        <div class="btn-txt bg-white px-3 py-1 mb-2" id="today-txt">Start today</div>
+                        <h1>Get more leads, more customers, and more revenue</h1>
+                        <p> Stop losing leads because of a non-optimized landing page. Start converting your users to paying customers and winning more sales today with a new landing page!</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-md-3">
+                    <form action="" class="form-tag">
+                        <div class="form-first-div mb-3 px-3 py-4">
+                            <p id="formSignUptxt">Sign up and get our free e-book!</p>
+                        </div>
+                        <div class="form-second-div px-3 pb-4 pt-2">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" aria-label="First name">
+                                </div>
+                                <div class="col">
+                                    <label for="" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" aria-label="Last name">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="" class="form-label">Company or Organisation</label>
+                                <input type="email" class="form-control" aria-describedby="emailHelp">
+
+                            </div>
+                            <button class="btn btn-primary btn-block mt-2" id="submit_btn">Submit</button>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!--=======================================================================-->
+
+    <!--Social-->
+    <section>
+        <div class="container social-container py-4">
+            <p>HERE'S WHERE YOU CAN FIND US</p>
+
+
+
+            <div class="row mb-2 text-center">
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <img src="assets/google.png" alt="">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <img src="assets/product.png" alt="">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <img src="assets/mailchimp.png" alt="">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <img src="assets/instagram.png" alt="">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <img src="assets/pinterest.png" alt="">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-3">
+                    <img src="assets/dribble.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--=======================================================================-->
+    <!-- SERVICES -->
+    <section class="service-section" id="panel">
+        <div class="container service-container py-5">
+
+            <div class="row">
+                <div class="btn-txt purple m-2" id="marketing-txt">Marketing</div>
+                <h3>A better way to capture leads</h3>
+
+                <p class="w-75">Design can go a long way when capturing leads on your website. This lead caputre landing page example can help you get started!</p>
+
+                <div class="col-md-6 mb-4">
+                    <div class="service-div py-5 px-4">
+                        <div class="icon-div purple">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <p class="service-head">Reach sales goals
+                        </p>
+                        <p class="service-subhead"> Attract and convert prospects into paying customers on your website by implementing a new design into your lead generation strategy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="service-div py-5 px-4">
+                        <div class="icon-div green">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <p class="service-head">Use the right tools
+
+                        </p>
+                        <p class="service-subhead">By adding forms, call to action buttons, and information boxes, this template has the right tools to capture new leads.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="service-div py-5 px-4">
+                        <div class="icon-div blue">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <p class="service-head">Easy to customimze
+
+                        </p>
+                        <p class="service-subhead"> Take sections and components from this UI Kit to build multiple variations of a lead caputre page to test which one performs better!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="service-div py-5 px-4">
+                        <div class="icon-div yellow">
+                            <i class="fas fa-columns"></i>
+                        </div>
+                        <p class="service-head">Cultivate better customers
+                        </p>
+                        <p class="service-subhead">Learn how lead generation fits into your inbound marketing strategy and easy ways that you can start generating leads for your company
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--=======================================================================-->
+    <!-- READY TO GET STARTED -->
+    <section>
+        <div class="container ready-container py-4">
+            <div class="row">
+                <div class="col-md-7 col-lg-8">
+                    <h3 id="ready-txt">Ready to get started? </h3>
+                    <p> Create your account now!</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <button class="btn btn-outline-dark my-2 me-3" id="start_btn">Start Now</button>
+                    <button class="btn btn-outline-dark my-2 me-3" id="contact_btn">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=======================================================================-->
+    <!-- FOOTER-->
+    <section class="footer-section ">
+
+        <div class="container footer-container pt-5 pb-4 ">
+
+            <div class="row justify-content-between ">
+                <div class="col-md-3 mb-3 ">
+                    <h3>SB UI KIT PRO</h3>
+                    <p>Build Better Websites.</p>
+                    <i class="fab fa-instagram "></i> <i class="fab fa-facebook "></i><i class="fab fa-twitter "></i><i class="fab fa-github "></i>
+                </div>
+                <div class="col-md-2 mb-4 ">
+                    <h5>PRODUCT</h5>
+                    <p>Landing</p>
+                    <p>Pages</p>
+                    <p>Sections</p>
+                    <p>Documentation</p>
+                    <p>Change Log</p>
+                </div>
+
+                <div class="col-md-2 mb-4 ">
+                    <h5>TECHNICAL</h5>
+                    <p>Documentation </p>
+                    <p>Changelog</p>
+                    <p> Theme Customizer</p>
+                    <p>UI Kit</p>
+
+                </div>
+
+                <div class="col-md-2 mb-4 ">
+                    <h5>INCLUDES</h5>
+                    <p>Utilities</p>
+                    <p>Components</p>
+                    <p>Layouts</p>
+                    <p>Code Samples</p>
+                    <p> Affiliates</p>
+                    <p> Updates</p>
+                </div>
+                <div class="col-md-2 mb-2 ">
+                    <h5>LEGAL</h5>
+                    <p>Privacy Policy</p>
+                    <p>Terms and Conditions</p>
+                    <p> License</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+            <div class="d-flex flex-wrap justify-content-md-between ">
+                <p class="text-left ">Copyright© Your Website 2021</p>
+                <p class="text-right ">Privacy Policy · Terms & Conditions</p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!--=======================================================================-->
+
+    <!-- JS -->
+
+    <script>
+        var iconBg = document.getElementsByClassName("doc-icon-div");
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="script.js"></script>
+    <script src="bootstrap.js "></script>
+    <script src="popper.js "></script>
+
+
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css " integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=" anonymous
+                                        " referrerpolicy="no-referrer " />
+
+
+
+
+</body>
+
+</html>
