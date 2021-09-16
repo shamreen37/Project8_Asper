@@ -119,7 +119,7 @@ sunset_theme.addEventListener('click', function() {
     for (var j = 0; j < head.length; j++) {
         head[j].style.color = "#fb5d4b";
     }
-    document.querySelector('header').style.background = "#FB5D4B";
+    document.querySelector('header').style.background = "#ff793f";
     document.querySelector('#buy-btn').style.background = "#FB5D4B";
     document.querySelector('#formSignUptxt').style.color = "#FB5D4B";
     document.querySelector('#submit_btn').style.background = "#FB5D4B";
